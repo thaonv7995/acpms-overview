@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ACPMS - Agentic Coding Project Management System</title>
+  <meta name="description"
+    content="ACPMS is an open-source project management system that bridges the gap between requirements and AI agents (Claude, Cursor) with a strict human-in-the-loop workflow." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+  <link rel="icon" type="image/png" href="./assets/favicon.png" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <header class="topbar panel" id="top">
+    <div class="topbar-inner">
+      <a class="brand" href="#top" aria-label="ACPMS home">
+        <span class="brand-mark">ACPMS</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#features">Features</a>
+        <a href="#workflow">Workflow</a>
+        <a href="#opensource">Open Source</a>
+      </nav>
+
+      <div class="topbar-actions">
+        <a class="button button-primary" href="https://github.com/thaonv7995/acpms" target="_blank" rel="noreferrer">
+          View on GitHub
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <div class="page-shell">
+    <main>
+      <section class="hero">
+        <div class="hero-copy" style="--delay: 0ms">
+          <div class="hero-badge-row">
+            <p class="eyebrow">
+              OPEN SOURCE • HUMAN-IN-THE-LOOP • MULTI-AGENT
+            </p>
+          </div>
+
+          <p class="hero-kicker">
+            Agentic Coding Project Management System
+          </p>
+
+          <h1>
+            Shape the vision. Let agents write the code.
+          </h1>
+
+          <p class="hero-body">
+            Visual project management meets CLI Runtimes. ACPMS binds Requirements, Tasks, and Attempt Logs onto a
+            single surface, allowing small teams to ship incredibly fast without losing oversight or review authority.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="https://github.com/thaonv7995/acpms" target="_blank"
+              rel="noreferrer">
+              View on GitHub
+            </a>
+
+            <a class="button button-secondary" href="#workflow">
+              See the Workflow
+            </a>
+          </div>
+
+          <div class="proof-row">
+            <article class="proof-card panel" style="--delay: 80ms">
+              <span class="proof-icon">📎</span>
+              <p>Requirements, tasks, and code logs stay linked forever.</p>
+            </article>
+
+            <article class="proof-card panel" style="--delay: 140ms">
+              <span class="proof-icon">⚡</span>
+              <p>
+                Seamlessly switch between Claude Code, Codex, Gemini, and Cursor.
+              </p>
+            </article>
+
+            <article class="proof-card panel" style="--delay: 200ms">
+              <span class="proof-icon">💬</span>
+              <p>
+                OpenClaw Gateway integration for Telegram & Slack ingestion.
+              </p>
+            </article>
+
+            <article class="proof-card panel" style="--delay: 260ms">
+              <span class="proof-icon">🛡️</span>
+              <p>Human-in-the-loop: Review and Preview before any Merge.</p>
+            </article>
+          </div>
+        </div>
+
+        <div class="hero-stage" style="--delay: 120ms">
+          <div class="stage-board panel">
+            <div class="stage-board-head">
+              <span class="stage-badge">LIVE SURFACE</span>
+              <span class="stage-caption">
+                Management Interface & Live Agent Tracking
+              </span>
+            </div>
+
+            <figure class="stage-screen frame">
+              <img src="./assets/architecture.webp" alt="ACPMS architecture diagram from planning to code generation" />
+            </figure>
+          </div>
+
+          <article class="metric-card metric-runtime panel">
+            <strong>4+</strong>
+            <span>Compatible CLI Runtimes out of the box</span>
+          </article>
+
+          <article class="metric-card metric-review panel">
+            <strong>HITL</strong>
+            <span>Strict human-in-the-loop review gates</span>
+          </article>
+
+          <figure class="floating-card floating-mobile frame">
+            <img src="./assets/dashboard.webp" alt="Flexible Project and Assistant management" />
+            <figcaption>
+              <span class="card-label">Project Management</span>
+              <strong>Visual Kanban dashboard for PO/PM/Devs</strong>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="signal-ribbon scroll-reveal" aria-label="ACPMS capability ribbon">
+        <span>Chat intake</span>
+        <span>Approved requirements</span>
+        <span>Task attempts</span>
+        <span>Human review gate</span>
+        <span>Preview before merge</span>
+        <span>GitLab / GitHub Sync</span>
+        <span>OpenClaw Gateway</span>
+        <span>Self-hostable</span>
+      </section>
+
+      <section class="section scroll-reveal" id="features">
+        <div class="section-heading mx-auto text-center">
+          <p class="section-tag">WHY ACPMS</p>
+          <h2>
+            Not a conceptual demo. A battle-tested workflow.
+          </h2>
+          <p class="max-w-2xl mx-auto">
+            Built for ultra-small teams operating under real product delivery pressure. ACPMS provides explicit context,
+            strict review gates, and deep visibility into agent behavior.
+          </p>
+        </div>
+
+        <div class="manifesto-grid mt-12">
+          <article class="manifesto-card panel group" style="--delay: 0ms">
+            <div class="card-icon-wrapper">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
+                <polyline points="14 2 14 8 20 8" />
+                <path d="M16 13H8" />
+                <path d="M16 17H8" />
+                <path d="M10 9H8" />
+              </svg>
+            </div>
+            <h3>Context over Code</h3>
+            <p>
+              AI Agents only do well when they understand the goal. Every request is broken into clear Tasks; every
+              agent loop is bound strictly to that scope.
+            </p>
+          </article>
+
+          <article class="manifesto-card panel group" style="--delay: 80ms">
+            <div class="card-icon-wrapper">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                <path d="m9 12 2 2 4-4" />
+              </svg>
+            </div>
+            <h3>Humans retain the final say</h3>
+            <p>
+              Agent code generation is blazing fast, but ACPMS keeps a human-in-the-loop (HITL) to review terminal logs
+              and preview UI results before merging.
+            </p>
+          </article>
+
+          <article class="manifesto-card panel group" style="--delay: 160ms">
+            <div class="card-icon-wrapper">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect width="18" height="18" x="3" y="3" rx="2" ry="2" />
+                <line x1="3" x2="21" y1="9" y2="9" />
+                <line x1="9" x2="9" y1="21" y2="9" />
+              </svg>
+            </div>
+            <h3>One workspace for BA, PM, and Devs</h3>
+            <p>
+              Stop copying and pasting requirements across tools. ACPMS consolidates the Kanban board and the live AI
+              Terminal logs into a single dashboard.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section workflow-section scroll-reveal" id="workflow">
+        <div class="section-layout">
+          <div class="section-heading is-narrow">
+            <p class="section-tag">VISUAL WORKFLOW</p>
+            <h2>A transparent journey from raw idea to deployment.</h2>
+            <p>
+              Stop letting Agents run blindly in your terminal. ACPMS breaks the workflow into safe, reviewable, and
+              repeatable modules.
+            </p>
+          </div>
+
+          <div class="timeline panel">
+            <article class="timeline-step group" style="--delay: 0ms">
+              <span class="timeline-index">01</span>
+              <div>
+                <h3>1. Intake and Breakdown</h3>
+                <p>
+                  Receive ideas from Telegram/Slack via OpenClaw. The project owner writes the Requirement, approves it,
+                  and breaks it down into bite-sized Agent Tickets.
+                </p>
+              </div>
+            </article>
+
+            <article class="timeline-step group" style="--delay: 70ms">
+              <span class="timeline-index">02</span>
+              <div>
+                <h3>2. Select the right Engine</h3>
+                <p>
+                  Different tasks need different brains. The system natively integrates with underlying Claude Code,
+                  Cursor, or Gemini CLIs using their built-in authentication.
+                </p>
+              </div>
+            </article>
+
+            <article class="timeline-step group" style="--delay: 140ms">
+              <span class="timeline-index">03</span>
+              <div>
+                <h3>3. Agent Execution & Live Logs</h3>
+                <p>
+                  Agents are invoked in isolated worktrees. You monitor the entire Terminal Log (what the agent chats,
+                  edits, and tests) in real-time.
+                </p>
+              </div>
+            </article>
+
+            <article class="timeline-step group" style="--delay: 210ms">
+              <span class="timeline-index">04</span>
+              <div>
+                <h3>4. Review, Preview, and Merge</h3>
+                <p>
+                  The system spins up a Preview Environment. QA/BA teams can test the new UI before clicking Accept,
+                  automatically triggering a GitLab/GitHub Merge Request.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section showcase-section scroll-reveal" id="showcase">
+        <div class="section-heading mx-auto text-center">
+          <p class="section-tag">SURFACES & INTERFACE</p>
+          <h2>
+            Designed for teams that actually need to ship features.
+          </h2>
+          <p class="max-w-2xl mx-auto">
+            See the full picture: System configuration, Kanban workflow, live Terminal streams, and file diff histories
+            all in one unified workspace.
+          </p>
+        </div>
+
+        <div class="gallery mt-12">
+          <figure class="gallery-card gallery-wide frame group">
+            <div class="gallery-img-wrapper">
+              <img src="./assets/kanban-board.png" alt="Visual task assignment Kanban board" />
+            </div>
+            <figcaption>
+              <strong>Interactive Kanban Board</strong>
+              <span>
+                Assign work to AI without touching the terminal and track progress seamlessly.
+              </span>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-card frame group">
+            <div class="gallery-img-wrapper">
+              <img src="./assets/settings.webp" alt="Agent, Provider, and Webhooks configuration screen" />
+            </div>
+            <figcaption>
+              <strong>Agent & Provider Settings</strong>
+              <span>
+                Seamlessly uses the native CLI auth configured on your host machine.
+              </span>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-card frame group">
+            <div class="gallery-img-wrapper">
+              <img src="./assets/dashboard.webp" alt="Flexible Project and Assistant management" />
+            </div>
+            <figcaption>
+              <strong>Project Overview Management</strong>
+              <span>
+                Manage all pending Requirements, Bugs, and Tasks for your project.
+              </span>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section fit-section scroll-reveal" id="fit">
+        <div class="section-heading">
+          <p class="section-tag">WHO IT'S FOR</p>
+          <h2>A weapon for small teams under tight deadlines.</h2>
+          <p>
+            ACPMS isn't designed to carry the bloated processes of Enterprise. It was born to help tiny teams maximize
+            velocity through AI without losing control.
+          </p>
+        </div>
+
+        <div class="fit-grid">
+          <article class="fit-card panel hover-glow">
+            <div class="card-icon-wrapper mini">🚀</div>
+            <h3>Founders & Operators</h3>
+            <p>
+              Translate business requirements into clear Design Specs so Agents understand and execute end-to-end.
+            </p>
+          </article>
+
+          <article class="fit-card panel hover-glow">
+            <div class="card-icon-wrapper mini">🔍</div>
+            <h3>BA, PM & QA/QC Testers</h3>
+            <p>
+              Access an isolated Preview Sandbox to test new features immediately without waiting for developer machine
+              setups.
+            </p>
+          </article>
+
+          <article class="fit-card panel hover-glow">
+            <div class="card-icon-wrapper mini">💻</div>
+            <h3>Solo Software Engineers</h3>
+            <p>
+              Act as the 'Lead Engineer' assigning tasks to a fleet of AI subordinates, focusing only on architecture
+              oversight and final code review.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section scroll-reveal" id="opensource">
+        <article class="open-source-card panel glow-card">
+          <div class="section-heading no-margin">
+            <p class="section-tag">OPEN SOURCE</p>
+            <h2>Host it yourself. Clean enough to audit by hand.</h2>
+            <p>
+              The entire backend is ultra-lightweight Rust paired with a React/Vite UI. You have full rights to clone,
+              audit the source code, and deploy internally completely free.
+            </p>
+          </div>
+
+          <ul class="bullet-list">
+            <li>Tech Stack: React + Vite, Rust Backend (Axum), PostgreSQL DB.</li>
+            <li>Capabilities: GitLab/GitHub integration via PAT, isolated Worktrees, Terminal Streaming.</li>
+            <li>Deployment: Flexible Docker Compose or clean Single-Binary execution.</li>
+          </ul>
+
+          <div class="quickstart panel inward-shadow">
+            <div class="quickstart-header">
+              <p class="terminal-caption">Automated Installation (Linux/macOS WSL)
+              </p>
+              <button class="button-copy" id="copy-install-cmd" aria-label="Copy command">
+                <svg class="icon-copy" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                <svg class="icon-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </button>
+            </div>
+            <pre><code id="install-cmd-text">bash -c "$(curl -sSL https://raw.githubusercontent.com/thaonv7995/acpms/main/install.sh)"</code></pre>
+          </div>
+
+          <div class="hero-actions mt-6">
+            <a class="button button-primary" href="https://github.com/thaonv7995/acpms" target="_blank"
+              rel="noreferrer">
+              Download Source
+            </a>
+
+            <a class="button button-secondary" href="https://github.com/thaonv7995/acpms#readme" target="_blank">
+              System Documentation
+            </a>
+          </div>
+        </article>
+      </section>
+
+      <section class="section support-section scroll-reveal" id="donate">
+        <article class="support-card-flat mt-12">
+          <div class="support-row-inner">
+            <div class="support-text">
+              <div class="section-heading no-margin">
+                <p class="section-tag">SUPPORT THE PROJECT</p>
+                <h3 class="support-h3">
+                  Finding ACPMS useful for your workflow?
+                </h3>
+              </div>
+              <p>
+                This project is open-source and free. If it helps your team run smoother, buying the developer a coffee
+                is a massive motivation to continue polishing the UX, fixing bugs, and integrating new CLI Agents.
+              </p>
+            </div>
+
+            <div class="support-cta">
+              <a class="button button-donate" href="https://buymeacoffee.com/thaonv795" target="_blank"
+                rel="noreferrer">
+                Buy the Developer a Coffee ☕
+              </a>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="footer scroll-reveal">
+      <div class="footer-brand-col">
+        <p class="footer-brand">ACPMS</p>
+        <p class="footer-desc">
+          An Agentic Coding Project Management System. Built for teams that want to ship blazingly fast while remaining
+          absolutely safe.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <a href="https://github.com/thaonv7995/acpms" target="_blank" rel="noreferrer">
+          GitHub Repository
+        </a>
+        <a href="https://buymeacoffee.com/thaonv795" target="_blank" rel="noreferrer"
+          class="text-primary hover-glow-text">
+          Support the Project
+        </a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="./script.js"></script>
+  <script>
+    // Intersection Observer for scroll reveal animations
+    document.addEventListener('DOMContentLoaded', () => {
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+      };
+
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll('.scroll-reveal').forEach((el) => {
+        observer.observe(el);
+      });
+    });
+  </script>
+</body>
+
+</html>
