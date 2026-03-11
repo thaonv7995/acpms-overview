@@ -317,6 +317,44 @@
         </div>
       </section>
 
+      <section class="section showcase-section scroll-reveal" id="upcoming">
+        <div class="section-heading mx-auto text-center">
+          <p class="section-tag">ROADMAP</p>
+          <h2>
+            Upcoming Features
+          </h2>
+          <p class="max-w-2xl mx-auto">
+            A sneak peek into what's being built next. Expanding the ecosystem with powerful new capabilities.
+          </p>
+        </div>
+
+        <div class="gallery mt-12">
+          <figure class="gallery-card frame group">
+            <div class="gallery-img-wrapper is-upcoming">
+              <img src="./assets/agent_gateway_architecture_final.png" alt="Agent Gateway Protocol Architecture" />
+            </div>
+            <figcaption>
+              <strong>Agent Gateway Protocol</strong>
+              <span>
+                Standardized protocol for connecting external agents and services seamlessly.
+              </span>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-card frame group">
+            <div class="gallery-img-wrapper is-upcoming">
+              <img src="./assets/terminal-chat-ui.png" alt="Integrated IDE Chat & Terminal UI" />
+            </div>
+            <figcaption>
+              <strong>Live IDE & Terminal Chat</strong>
+              <span>
+                Integrated IDE chat and real-time terminal sync for enhanced developer experience.
+              </span>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
       <section class="section fit-section scroll-reveal" id="fit">
         <div class="section-heading">
           <p class="section-tag">WHO IT'S FOR</p>
@@ -453,8 +491,29 @@
     </footer>
   </div>
 
+  <div id="image-lightbox" class="lightbox">
+    <img src="" alt="Full view" class="lightbox-content" id="lightbox-img">
+  </div>
+
   <script src="./script.js"></script>
   <script>
+    // Lightbox Logic
+    const lightbox = document.getElementById('image-lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+
+    document.querySelectorAll('.gallery-img-wrapper img').forEach(img => {
+      img.addEventListener('click', () => {
+        lightboxImg.src = img.src;
+        lightbox.classList.add('is-visible');
+        document.body.style.overflow = 'hidden'; // Stop scrolling
+      });
+    });
+
+    lightbox.addEventListener('click', () => {
+      lightbox.classList.remove('is-visible');
+      document.body.style.overflow = ''; // Resume scrolling
+    });
+
     // Intersection Observer for scroll reveal animations
     document.addEventListener('DOMContentLoaded', () => {
       const observerOptions = {
